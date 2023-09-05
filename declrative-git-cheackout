@@ -13,5 +13,15 @@ git 'https://github.com/R807989/maven-web-application.git'
 
   }
  }
+ stage ('build')
+{
+  steps 
+{
+sh "mvn clean install package"
+
+   
+
+  }
+ }
 }
 }
