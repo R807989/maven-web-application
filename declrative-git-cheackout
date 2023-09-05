@@ -1,9 +1,10 @@
 pipeline 
 {
 agent any
-tools
+enivornment
 {
-maven "maven-8"
+PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven-8/bin"
+
 
 
 }
@@ -24,7 +25,7 @@ git 'https://github.com/R807989/maven-web-application.git'
 {
   steps 
 {
-sh "maven-8/bin/mvn clean install"
+sh "mvn clean install package"
 
    
 
