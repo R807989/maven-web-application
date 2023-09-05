@@ -8,7 +8,7 @@ stage('git int')
 {
 steps
 {
-
+git 'https://github.com/R807989/maven-web-application.git'
 }
 }
 }
