@@ -3,7 +3,7 @@ pipeline
 agent any
   stages
 {
- stage (git-cheackout')
+ stage ('git-cheackout')
 {
   steps 
 {
