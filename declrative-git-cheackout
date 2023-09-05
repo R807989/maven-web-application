@@ -14,6 +14,7 @@ PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven-8/bin:$p
  stage ('git-cheackout')
 {
   steps 
+
 {
 git 'https://github.com/R807989/maven-web-application.git'
 
@@ -27,7 +28,7 @@ git 'https://github.com/R807989/maven-web-application.git'
 {
 sh "mvn clean install package"
 
-   deploy adapters: [tomcat9(credentialsId: 'my', path: '', url: 'http://3.87.63.214:8080/')], contextPath: null, war: '**/.*war'
+   
 
   }
  }
@@ -36,6 +37,7 @@ sh "mvn clean install package"
   steps 
 {
 
+deploy adapters: [tomcat9(credentialsId: 'my', path: '', url: 'http://3.87.63.214:8080/')], contextPath: null, war: '**/.*war'
 
    
 }
