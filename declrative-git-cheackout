@@ -1,6 +1,12 @@
 pipeline 
 {
 agent any
+enivornment
+{
+PATH = /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven-8/bin:$PATH
+
+}
+
   stages
 {
  stage ('git-cheackout')
