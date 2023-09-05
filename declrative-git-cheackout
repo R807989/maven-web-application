@@ -37,7 +37,7 @@ sh "mvn clean install package"
   steps 
 {
 
-deploy adapters: [tomcat9(credentialsId: 'my', path: '', url: 'http://3.87.63.214:8080/')], contextPath: null, war: '**/.*war'
+deploy adapters: [tomcat9(credentialsId: 'my', path: '', url: 'http://3.87.63.214:8080/')], contextPath: null, war: '**/*.war'
 
    
 }
