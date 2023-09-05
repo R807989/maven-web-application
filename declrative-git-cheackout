@@ -1,9 +1,12 @@
-pipeline {
+pipeline 
+{
 agent any
   stages
 {
- stage {
-  steps {
+ stage (git-cheackout')
+{
+  steps 
+{
    git 'https://github.com/R807989/maven-web-application.git'
 
   }
