@@ -1,18 +1,47 @@
 pipeline 
 {
 agent any
+environment
+{
+PATH=/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven-8:$PATH
+
+}
   stages
 {
   stage ('git checkout')
 {
-steps {
+steps 
+{
+
+git 'https://github.com/R807989/maven-web-application.git'
+
+
+
+}
+}
+    stage ('build')
+{
+steps 
+{
+
+sh "mvn clean install package"
 
 
 
 }
 }
 
+  stage ('deploy')
+{
+steps 
+{
 
+
+
+
+
+}
+}
   }
 
   }
