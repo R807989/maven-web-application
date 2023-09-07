@@ -3,7 +3,7 @@ pipeline
 agent any 
 enviornment
 {
-PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven-9:$PATH"
+PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven-9/bin:$PATH"
 
 }
 stages
