@@ -1,6 +1,10 @@
 pipeline
 {
 agent any
+environment{
+PATH=/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven/bin:$PATH
+
+}
   stages
 {
   stage("intigration")
@@ -8,6 +12,13 @@ agent any
     steps
     {
       git 'https://github.com/R807989/maven-web-application.git'
+    }
+  }
+  stage("build")
+  {
+    steps
+    {
+      sh "mvn clean package"
     }
   }
 }
