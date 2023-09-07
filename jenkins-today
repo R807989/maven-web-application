@@ -1,6 +1,11 @@
 pipeline
 {
 agent any 
+enviornment
+{
+PATH="$PATH:/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven-9"
+
+}
 stages
 {
 stage("git int")
@@ -10,5 +15,15 @@ steps
 git 'https://github.com/R807989/maven-web-application.git'
 }
 }
+stages
+{
+stage("build")
+{
+steps
+{
+sh "mvn clean install package"
+}
+}
+
 }
 }
