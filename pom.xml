@@ -99,13 +99,13 @@
 	      <id>nexus</id>
 	      <name>abdul-releases</name>
 	       
-             <url> http://44.201.199.13:8081/repository/abdul-release/</url>
+             <url> http://44.201.144.131:8081/repository/abdul-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>abdul-snapshot </name>
-	      <url>http://44.201.199.13:8081/repository/abdul-snapshot/</url>
+	      <url>http://44.201.144.131:8081/repository/abdul-snaps/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
