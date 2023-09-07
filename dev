@@ -21,5 +21,12 @@ PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven/bin:$PAT
       sh "mvn clean package"
     }
   }
+stage("deploy")
+  {
+    steps
+    {
+      deploy adapters: [tomcat9(credentialsId: 'ravi', path: '', url: 'http://44.201.247.78:8080')], contextPath: null, war: '**/*.war'
+    }
+  }
 }
 }
