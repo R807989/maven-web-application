@@ -3,9 +3,10 @@ pipeline
   agent any
   stages
   {
-    stage("intigration")
+    stage("intigration") {
       steps{
       git 'https://github.com/R807989/maven-web-application.git'
     }
     }
+}
 }
