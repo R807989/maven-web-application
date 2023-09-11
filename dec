@@ -14,8 +14,8 @@ PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven/bin:$PAT
     }
   
 }
- stages
-  {
+ 
+  
     stage("build") {
       steps{
       sh "mvn clean install package"
