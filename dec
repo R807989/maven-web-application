@@ -25,16 +25,11 @@ PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven/bin:$PAT
 
 stage("test") {
       steps{
-      script
-{
-def scannerHome = tool name: 'sonar',type: 'hudson.plugins.sonar.SonarRunnerInstallation'
-
- withSonarQubeEnv('sonar') {
-                        sh "${scannerHome}/bin/sonar-scanner"
-}
-                    }
+      withSonarQubeEnv('sonar') {
+     sh "mvn  sonar:soanr"
     }
   
+}
 }
 }
 }
