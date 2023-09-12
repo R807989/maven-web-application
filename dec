@@ -26,7 +26,7 @@ PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven/bin:$PAT
 stage("test") {
       steps{
       withSonarQubeEnv("sonarqube") {
-     sh "mvn  sonar:soanar"
+     sh "mvn  sonar:sonar"
     }
   
 }
