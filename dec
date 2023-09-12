@@ -28,8 +28,19 @@ stage("test") {
       withSonarQubeEnv("sonarqube") {
      sh "mvn  sonar:sonar"
     }
+   
+    
   
 }
 }
+  stage("upload artifacts") {
+      steps{
+   
+      
+    }
+  
 }
+
+}
+
 }
