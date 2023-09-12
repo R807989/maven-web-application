@@ -27,7 +27,7 @@ stage("test") {
       steps{
       script
 {
-def scannerHome = tool name: 'sonarqube scanner',type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+def scannerHome = tool name: 'sonar',type: 'hudson.plugins.sonar.SonarRunnerInstallation'
 
  withSonarQubeEnv('sonar') {
                         sh "${scannerHome}/bin/sonar-scanner"
