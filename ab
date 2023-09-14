@@ -12,7 +12,7 @@ stage("git")
     }
     }
 
-stages{
+
 stage("build")
   {
  
