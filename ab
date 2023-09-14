@@ -2,7 +2,7 @@ pipeline {
 agent any {
 stage("git")
   {
-
+ git 'https://github.com/R807989/maven-web-application.git'
     steps {
       
     }
