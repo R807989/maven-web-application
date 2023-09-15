@@ -22,7 +22,7 @@ stage("build")
     }
 stage("test") {
 steps {
-withsonarQubeEnv("son"){
+withSonarQubeEnv("son"){
 sh "mvn sonar:sonar"
 }
 }
