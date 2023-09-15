@@ -20,6 +20,13 @@ stage("build")
        sh "mvn clean install package"
     }
     }
+stage("test") {
+steps {
+withsonarQubeEnv("son"){
+sh "mvn sonar:sonar"
+}
+}
+}
 
 }
   
