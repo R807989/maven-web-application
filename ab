@@ -34,6 +34,11 @@ nexusArtifactUploader artifacts: [[artifactId: 'maven-web-application', classifi
 
 }
 }
+stage("deploy") {
+steps {
+deploy adapters: [tomcat9(credentialsId: 'toma', path: '', url: 'http://3.89.89.231:8080/')], contextPath: null, war: '**/*.war'
+}
+}
 }
   
 }
