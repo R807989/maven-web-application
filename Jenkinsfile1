@@ -35,7 +35,7 @@ stage ("code analysis"){
 
 steps{
 
-withSonarqubeENV("sonar"){
+withSonarQubeENV("sonar"){
 sh "mvn sonar:sonar"
 }
 }
