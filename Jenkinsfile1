@@ -34,7 +34,7 @@ sh "mvn clean install package"
 
 stage ("code analysis") {
             steps {
-                withSonarQubeEnv("sonar") {
+                withSonarQubeEnv("sonarqube") {
                     sh "mvn sonar:sonar"
 }
 }
