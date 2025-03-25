@@ -24,9 +24,23 @@ sh "mvn clean install package"
 }
 
 
+stage("deploy-application"){
+
+
+steps{
+
+sshagent(['deploy_user']) {
+   sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/ci-cd pipeline/target/maven-web-application.war ec2-user@54.91.117.119/opt/tomcat-9/webapps"
+}
+}
+}
+
+
+
 
 
 
 }
 
 }
+
